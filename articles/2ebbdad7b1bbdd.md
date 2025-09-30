@@ -144,7 +144,7 @@ export PATH=/Users/my_name/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/loca
 
 Windows 以外の VSCode は起動時、`--force-user-env`というフラグ(デフォルトで on)により、内部的に一度ターミナルを起動し、すべての環境変数を取得します。
 
-VSCode 内でターミナルを起動した場合、1.で取得した環境変数をすべて引き継いだ上で`~/.zshrc`,`~/.zprofile`などの設定ファイルが再度読み込まれる (`"terminal.integrated.inheritEnv": false`により VSCode 本体の環境変数を無視してターミナル起動もできます)
+VSCode 内でターミナルを起動した場合、上記の VSCode 起動時に取得した環境変数をすべて引き継いだ上で`~/.zshrc`,`~/.zprofile`などの設定ファイルが再度読み込まれる (`"terminal.integrated.inheritEnv": false`により VSCode 本体の環境変数を無視してターミナル起動もできます)
 
 この結果、VSCode 上では以下の流れで nix 関連のパスが含まれないターミナルが起動してしまいます。
 
