@@ -34,6 +34,8 @@ mac で zsh を使用している場合、以下のいずれかで解決でき�
 
 ## 1. 公式インストーラ(https://nixos.org/nix/install)で nix をマルチユーザーインストールする
 
+インストール過程で起きる、本事象に関わる変更は下記の二つです
+
 - `/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh`が作成される
   - 一言で説明すると`__ETC_PROFILE_NIX_SOURCED`が設定されていない場合に以下を行うスクリプトです
     - `__ETC_PROFILE_NIX_SOURCED`を`1`に設定
